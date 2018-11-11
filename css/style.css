@@ -166,7 +166,210 @@ a, a:hover, button, button:hover, .anime {
     -webkit-flex-flow:row-reverse nowrap;
     flex-flow:row-reverse nowrap;
 }
+/* ФОРМУЛЫ
 
+width 1920px - ширина всего экрана.
+width 300px - ширина бокового меню.
 
+Получаем размер в процентах меню:
+width 300px / width 1920px * 100 = 15.625vh
+или 2 вариант:
+width 300px * 100 / 1920px = 15.625vh
+соответственно ширина контента: 84,375vh
+*/
 
+body {
+    font-family: 'Nunito', sans-serif;
+}
+/*header start*/
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    height: 100vh;
+    width: 15.62vw;
+    background-color: #242b2e;
+    color: #6b7072;
+    box-shadow: 8px 0px 14px 0px #020202;
+    flex-flow: column nowrap;
+    display: flex;
+}
+#logo {
+    width: 100%;
+    height: 11.57vh;
+    background-color: #fff;
+}
+#logo img {
+    width: 6vw;
+}
+#main_nav a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: .93vmax;
+    /*для вычисления шрифта - 18px делим
+    на ширину экрана (1920px) и умножаем на 100,
+    ставим ViewPortMax(vmax) - т.е. браузер сам подбирает 
+    шрифт ориентируясь по БОЛЬШЕЙ грани экрана*/
+    line-height: 1.66vmax; /*то же самое, по умолчанию 32px -
+    32/1920 и *100    */
+    height: 3.22vmax;   /* высоту блока ссылки высчитываем 
+    аналогично - по умолчанию - 62px,
+    62/1920 и *100 = 3,22vmax */
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap; /*в одну строчку и запрет на 
+    написание в 2 линии*/
+    justify-content: flex-end; /*перемещаем все ссылки вправо*/
+    align-content: center;
+    align-items: center; /*выравниваем надписи по центру блока*/
+    background-color: #2f373b;
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1e5799 0%, #333b3f 0%, #2e363a 100%, #207cca 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#333b3f 0%,#2e363a 100%,#207cca 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #1e5799 0%,#333b3f 0%,#2e363a 100%,#207cca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#207cca',GradientType=0 ); /* IE6-9 */
+    padding-right: 1.3vmax;/*23:1920x100*/
+}
+#main_nav a:hover {
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(top,  #1e5799 0%, #18a3a1 0%, #2e363a 100%, #31bcba 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #1e5799 0%,#18a3a1 0%,#2e363a 100%,#31bcba 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #1e5799 0%,#18a3a1 0%,#2e363a 100%,#31bcba 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#31bcba',GradientType=0 ); /* IE6-9 */
+}
+nav li {
+    list-style: none;
+}
+#title_filter {
+    color: #1ab5b3;
+    fill: #1ab5b3; /*заливка картинки */
+    font-size: 1.2vmax;
+    padding: 1.25vmax;
+}
+#title_filter svg {
+    width: 0.9vmax;
+    height: 0.9vmax;
+    margin-left: .62vmax;
+}
+#filter li {
+    list-style: none;
+    width: 100%;
+    text-align: right;
+}
+#filter a {
+    font-size: 1vmax;
+    line-height: 1.25vmax;
+    text-align: right;
+    padding: .41vmax 1.25vmax;
+    text-decoration: none;
+    color: #616669;
+}
+#filter a.active {color: #fff;} 
+#filter a:hover {color: #fff;}
 
+#soc_bar {
+    padding-top: 1vmax;
+    border-top: 1px solid #1e282b;
+    width: 100%;
+    margin-top: .5vmax;
+}
+#soc_bar svg {
+    width: 1.5vmax;
+}
+#soc_bar a {
+    margin-right: .52vmax;
+}
+#soc_bar a:hover {
+    transform: scale(.9); /*планое уменьшение картинки*/
+}
+.copy {
+    text-align: right;
+    font-size: 1vmax;
+    padding: .52vmax .52vmax 0 0;
+    color: #6b7072;
+}
+.copy:last-child {
+    padding: 0 .52vmax;
+}
+/*header finish*/
+main {
+    width: 100%;
+    min-height: 100vh;
+    padding-left: 15.62vw; /*мейн будет под хедером*/
+}
+.work_box {
+    /*картинки заданы 405px на 311px,
+    для размера высоты - 311:1920x100 =  16.19vw
+    аналогично ширана - */
+    height: 16.19vw;
+    max-width: 21.09vw;/*если появится скроллинг - будет на влазить
+    поэтому макс.ширина*/
+    width: 25%;
+    position: relative; /*т.к.надо позиционировать внутри 2 элемента*/
+    overflow: hidden;/*перекрытие*/
+}
+.work_box img {
+    width: calc( 100% + 5vw );
+    height: auto;
+    position: absolute;
+    z-index: 1;
+}
+.work_box a {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: inherit;
+    background-color: rgba(45, 184, 185, .9);
+    color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    opacity: 0;
+}
+.work_box a:hover {
+    opacity: 1;
+}
+.work_box h2 {
+    font-size: 1.25vw;
+    font-weight: 400;
+    margin-bottom: .78vw;
+}
+.work_box h3 {
+    font-size: .9vw;
+    font-weight: 400;
+}
+.work_box h3:after {
+    content: '';
+    width: 50%;
+    height: 1px;
+    margin: 1vw auto;
+    display: block;
+    background-color: #fff;    
+}
+.arrow {
+    width: 3vw;
+    height: 3vw;
+    fill: #fff;
+}
+
+#info {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 5;
+    width: 4vw;
+    height: 4vw;
+    background-color: rgba(45, 184, 185, .9);
+    fill: #fff;
+    padding: 1.1vw;
+    cursor: pointer;
+}
+#info:hover {
+    transform: scale(.9);
+}

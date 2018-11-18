@@ -822,6 +822,7 @@ main {
 }
 #list_comments ul {
     list-style: none;
+    position: relative;
 }
 #list_comments li {
     margin-bottom: 1.66vw;
@@ -850,4 +851,82 @@ main {
     color: #a3a3a3;
     font-size: .93vw;
     margin-top: .83vw;
+}
+#list_comments ul ul {
+    margin-left: 2vw;
+    padding-left: 2vw;
+}
+#list_comments ul ul:before {
+    content: '';
+    display: block;
+    background-image: url(../img/back.png);
+    /* transform: rotate(-45deg); */ /*поворот изображения*/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 2vw;
+    height: 2vw;
+    position: absolute;
+    left: -1vw;
+}
+#form_comment {
+    margin-top: 1vw;
+}
+#left_form {
+    width: 50%;
+    padding-right: 0.5vw;
+}
+#left_form .input {
+    margin-bottom: 0.5vw;
+}
+#left_form .input:last-child {
+    margin-bottom:0;
+}
+.icon_form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3vw;
+    width: 4vw;
+    border: 1px solid #eaeaea;
+    border-right: none;
+}
+.icon_form svg {
+    width: 1.5vw;
+    height: auto;
+    fill: #1ab5b3;
+}
+.input input, .input textarea {
+    border: 1px solid #eaeaea;
+    font-size: 1vmax;
+    height: 3vw;
+    width: 100%;
+    padding: .93vw;
+}
+#right_form {
+    width: 50%;
+}
+#right_form .input textarea {
+    resize: none;
+    height: 6.5vw;
+}
+#right_form button {
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #1ab5b3;
+    font-size: 1vw;
+    padding: 1vw;
+    width: 100%;
+    height: 3vw;
+    margin-top: 0.5vw;
+}
+#archives li {
+    color: #a3a3a3;
+    font-size: 1vw;
+    list-style: none;
+}
+.line_sep {
+    border-left: 1px solid #e5e5e5;
+    padding-left: 1.56vw;
 }

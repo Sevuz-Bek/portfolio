@@ -962,4 +962,97 @@ main {
     height: 100vh;
     width: 100%;
 }
-    
+#menu_btn {
+    display: none;
+}
+@media
+only screen and ( min-device-width: 320px ) and
+( max-device-width: 480px ),
+only screen and ( max-width: 320px ),
+only screen and ( min-device-width: 768px ) and
+( max-device-width: 1024px )
+
+{
+    header {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+    #logo {
+        height: 20vh;
+    }
+    #logo img {
+        width: 35vw;
+    }
+    #main_nav a {
+        justify-content: center;
+        font-size: 2.5vmax;
+        height: 6vmax;
+    }
+    #main_nav,
+    #filter,
+    #soc_bar,
+    .copy {
+        display: none;
+    }
+    #main_nav.open {
+        display: block;
+    }
+    #menu_btn {
+        display: block;
+        font-size: 3vmax;
+        color: #fff;
+        padding: 3vw;
+        width: 100%;
+        background: #1e5799; /* Old browsers */
+        background: -moz-linear-gradient(top,  #1e5799 0%, #333b3f 0%, #2e363a 100%, #207cca 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #1e5799 0%,#333b3f 0%,#2e363a 100%,#207cca 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #1e5799 0%,#333b3f 0%,#2e363a 100%,#207cca 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#207cca',GradientType=0 ); /* IE6-9 */
+        border: none;
+    }
+    main {
+        padding-left: 0;
+    }
+    .work_box {
+        height: 40vw;
+        width: 50%;
+        max-width: 50vw;
+        position: relative;
+        overflow: hidden;
+    }
+    .work_box img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 1;  
+    }
+    .info_work_box .left_info, 
+    .info_work_box .right_info, 
+    .info_about_box .left_info, 
+    .info_about_box .right_info {
+        width: 100%;
+    }
+    .info_work_box .left_info .img_work_box {
+        width: 100%;
+        height: 45vw;
+        overflow: hidden;
+    }
+    .info_work_box .left_info .about_work, .info_about_box .about {
+        margin-top: 3vw;
+        margin-bottom: 3vw;
+        padding-bottom: 1.6vw;
+        border-bottom: 1px solid #e7e7e7;
+        color: #a3a3a3;
+        font-size: 3vw;
+        line-height: 5.56vw;
+    }
+    .info_work_box .left_info .about_work h1, 
+    .title_info, .info_about_box .about h1 {
+        font-size: 5.25vw;
+        line-height: 5.35vw;
+        margin-bottom: 3vw;
+        margin-top: 3vw;
+        padding-bottom: 3vw;
+    }
+}

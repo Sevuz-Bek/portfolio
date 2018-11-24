@@ -1055,4 +1055,171 @@ only screen and ( min-device-width: 768px ) and
         margin-top: 3vw;
         padding-bottom: 3vw;
     }
+    .pr_info li {
+        font-size: 4vw;
+        line-height: 12vw;
+    }
+    .pr_info li svg {
+        width: 2.5vmax;
+        margin-right: 4vw;
+    }
+    
+    .tag {
+        margin-right: 3vw;
+        margin-bottom: 2vw;
+        font-size: 4vw;
+    }
+    .left_info .img_about_box {
+        height: 40vw;
+    }
+    .stuf, .you {
+        width: 30vw;
+        height: 20vw;
+    }
+    .stuf img {
+        width: 100%;
+        height: 19.47vw;
+        overflow: hidden;
+        display: block;
+    }
+    .you span {
+        font-size: 4vw;
+    }
+    .our li {
+        margin-bottom: 3vw;
+        font-size: 4vw;
+    }
+    .testimonials .huw h3 {
+        font-size: 5vw;
+    }
+    .testimonials .huw { 
+        height: 10vw;
+    }
+    .testimonials .huw img {
+        width: 15vw;
+    }
+    .testimonials_text { 
+        font-size: 4vw;
+        line-height: 5vw;
+    }
+    .service li {
+        font-size: 4vw;
+    }
+    #list_post {
+        flex-flow: column nowrap;
+    }
+    .box_post { 
+        width: 100%;
+        margin-bottom: 3vw;
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+    .img_post {
+        height: 60vw;
+    }
+    .about_post h2 {
+        font-size: 4.1vw;
+    }
+    .another h3 {
+        font-size: 4vw;
+    }
+    .about_post h2 {
+        margin-bottom: 2vw;
+        margin-top: 3vw;
+    }
+    .post_form h2 {
+        font-size: 5vw;
+        margin-bottom: 4vw;
+    }
+    .post_form p {
+        line-height: 6vw;
+    }
+    .rew h4 {
+        font-size: 5vw;
+        line-height: 6vw;
+    }
+    .rew p {
+        font-size: 6vw;
+        line-height: 5vw;
+    }
+    .name_rew {
+        font-size: 4vw;
+    }
+    .more {
+        font-size: 4vw;
+        padding: 2.5vw;
+    }
+    #box_contact {
+        width: 100%;
+    }
+    #info_contact span {
+        font-size: 4vw;
+    }
+    #form_comment form {
+        flex-direction: column;
+    }
+    #left_form,
+    #right_form {
+        width: 100%;
+    }
+    .input input, .input textarea {
+        font-size: 2.5vmax;
+        height: 9vw;
+    }
+    .icon_form svg {
+        width: 3.5vw;
+    }
+    .icon_form {
+        width: 9vw;
+        height: 9vw;
+        margin-right: 2vw;
+        border: 1px solid #eaeaea;
+    }
+    #right_form .input textarea {
+        margin-top: 2vw;
+        resize: none;
+        height: 40vw;
+    }
+    #right_form button {
+        font-size: 5vw;
+        height: 10vw;
+    }
+    .about_comment h5 {
+        font-size: 3vw;
+        padding-bottom: 1vw;
+    }
+    #comments h4 {
+        font-size: 3vw;
+    }
+    .about_comment p {
+        font-size: 3vw;
+    }
+    .img_comment {
+        width: 12vw;
+        height: 5vw;
+    }
+    #archives li {
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+    #info {
+        width: 10vw;
+        height: 10vw;
+    }
+    #info_box {
+        top: 10vw;
+    }
+    #info_box li {
+        font-size: 2vmax;
+        line-height: 3vmax;
+    }
+    #info_box.open {
+        transform: translateX(1%);
+        padding: 3vw;
+    }
+    #info_box svg {
+    height: 3vw;
+    margin-right: 2vw;
+    }
+
 }
